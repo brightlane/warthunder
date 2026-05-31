@@ -1,0 +1,57 @@
+name: Build & Deploy WarThunder.gg
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build site
+        run: python build.py
+
+      - name: Verify outputs
+        run: |
+          echo "Pages: $(find dist -name '*.html' | wc -l)"
+          test -f dist/index.html        && echo "✅ index.html OK"
+          test -f dist/sitemap.xml       && echo "✅ sitemap.xml OK"
+          test -f dist/sitemap-main.xml  && echo "✅ sitemap-main.xml OK"
+          test -f dist/sitemap-kw.xml    && echo "✅ sitemap-kw.xml OK"
+          test -f dist/sitemap-blog.xml  && echo "✅ sitemap-blog.xml OK"
+          test -f dist/robots.txt        && echo "✅ robots.txt OK"
+          test -f dist/llms.txt          && echo "✅ llms.txt OK"
+          test -f dist/build-info.json   && echo "✅ build-info.json OK"
+          test -f dist/.nojekyll         && echo "✅ .nojekyll OK"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
