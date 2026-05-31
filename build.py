@@ -89,6 +89,36 @@ LANGUAGES = {
            "why6":"1억+ 플레이어","why6d":"세계 최대 규모의 무료 게임 커뮤니티 중 하나.",
            "disc":"제휴 사이트. War Thunder®는 Gaijin Entertainment의 상표입니다.",
            "meta_home":f"{YEAR}년 War Thunder 무료 플레이. 최고의 무료 군사 게임 — 2000개+ 차량. PC, PS4/5, Xbox."},
+
+    "es": {"name":"Español","dir":"ltr","locale":"es_ES",
+           "cta":"Jugar Gratis","dl":"Descargar Gratis",
+           "nav_home":"Inicio","nav_review":"Reseña","nav_compare":"Comparar","nav_blog":"Blog",
+           "hero1":f"EL MEJOR JUEGO MILITAR GRATIS {YEAR}","hero2":"VUELA. CONDUCE. DOMINA.",
+           "hero_sub":f"El juego militar más realista de {YEAR}. Aviones, tanques, barcos de guerra — 100% gratis en PC, PS4/5 y Xbox.",
+           "feat_title":"¿Por qué War Thunder?",
+           "why1":"100% Gratis","why1d":"Descarga y juega gratis para siempre. Sin suscripción ni cargos ocultos.",
+           "why2":"2.000+ Vehículos","why2d":"Aviones, tanques, helicópteros, buques de guerra. El mayor catálogo de vehículos en cualquier juego gratuito.",
+           "why3":"Combate Realista","why3d":"Física y balística auténticas. Cada vehículo modelado a partir de planos reales.",
+           "why4":"Multiplataforma","why4d":"PC (Steam/Gaijin), PS4/5, Xbox. Con juego cruzado.",
+           "why5":"Actualizaciones","why5d":"Nuevos vehículos, mapas y eventos en cada actualización.",
+           "why6":"100M+ Jugadores","why6d":"Una de las comunidades free-to-play más grandes del mundo.",
+           "disc":"Divulgación de afiliados: Ganamos una comisión si te registras a través de nuestros enlaces sin costo adicional. War Thunder® es marca registrada de Gaijin Entertainment.",
+           "meta_home":f"Juega War Thunder gratis en {YEAR}. El mejor juego militar gratuito — 2.000+ vehículos. PC, PS4/5, Xbox. Descarga ahora."},
+
+    "pt": {"name":"Português","dir":"ltr","locale":"pt_BR",
+           "cta":"Jogar Grátis","dl":"Baixar Grátis",
+           "nav_home":"Início","nav_review":"Avaliação","nav_compare":"Comparar","nav_blog":"Blog",
+           "hero1":f"MELHOR JOGO MILITAR GRÁTIS {YEAR}","hero2":"VOE. DIRIJA. DOMINE.",
+           "hero_sub":f"O jogo militar mais realista de {YEAR}. Caças, tanques, navios de guerra — 100% grátis no PC, PS4/5 e Xbox.",
+           "feat_title":"Por que War Thunder?",
+           "why1":"100% Grátis","why1d":"Baixe e jogue de graça para sempre. Sem assinatura, sem taxas ocultas.",
+           "why2":"2.000+ Veículos","why2d":"Aviões, tanques, helicópteros, navios de guerra. O maior catálogo de veículos em qualquer jogo gratuito.",
+           "why3":"Combate Realista","why3d":"Física e balística autênticas. Cada veículo modelado a partir de plantas reais.",
+           "why4":"Multiplataforma","why4d":"PC (Steam/Gaijin), PS4/5, Xbox. Com cross-play.",
+           "why5":"Atualizações","why5d":"Novos veículos, mapas e eventos a cada atualização.",
+           "why6":"100M+ Jogadores","why6d":"Uma das maiores comunidades free-to-play do mundo.",
+           "disc":"Divulgação de afiliados: Ganhamos uma comissão se você se inscrever pelos nossos links sem custo adicional. War Thunder® é marca registrada da Gaijin Entertainment.",
+           "meta_home":f"Jogue War Thunder grátis em {YEAR}. O melhor jogo militar gratuito — 2.000+ veículos. PC, PS4/5, Xbox. Baixe agora."},
 }
 
 # ── KEYWORDS (160+) ───────────────────────────────────────────────────────────
@@ -840,7 +870,7 @@ def build_llms(all_urls, page_count):
 - URL: {SITE_URL}/
 - Affiliate: {AFF_URL}
 - Niche: Free-to-play military games → War Thunder
-- Target markets: Australia, Canada, France, Germany, South Korea, New Zealand, UK, USA
+- Target markets: Australia, Canada, France, Germany, South Korea, New Zealand, UK, USA, Spain, Latin America, Brazil
 
 ## About War Thunder
 War Thunder is a free-to-play military MMO by Gaijin Entertainment (est. 2012).
